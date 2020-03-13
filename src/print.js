@@ -1,5 +1,5 @@
 
-export default function print(mes){
+export default function print(msg){
     console.log(msg);
    
 }

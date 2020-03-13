@@ -1,6 +1,7 @@
 
 import "./index.less";
+import Vue from "vue";
 
-module.exports = Vue.extend({
-    template: url("./view/index.tpl")
+export Vue.extend({
+    template: require("./view/index.tpl")
 });

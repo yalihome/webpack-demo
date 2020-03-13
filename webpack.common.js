@@ -7,7 +7,8 @@ const webpack = require("webpack");
 
 module.exports = {
     "entry": {
-        app: "./src/index.js"
+        app: "./src/index.js",
+        another: "./src/another-module.js"
     },
     "output":{
         filename: "[name].bundle.js",
@@ -24,12 +25,10 @@ module.exports = {
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: "common"
+        // })
     ],
-    "devtool": "inline-source-map",
-    "devServer": {
-        "contentBase": "./dist",
-        "hot": true
-    },
     "module": {
         "rules": [
             {
