@@ -48,8 +48,13 @@ module.exports = {
             },
             {
                 test: /\.tpl$/,  //编译为css后导入到对应的js文件中
-                use:["file-loader"]
+                use:["html-loader"]
             }
         ]
+    },
+    "resolve": {
+        "alias": {
+            "vue$": "vue/dist/vue.esm.js"  //vue 结尾的代码，坑爹啊，js结尾的呢
+        }
     }
 }

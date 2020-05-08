@@ -1,8 +1,11 @@
-exports [
+import Index from "../pages/index/index";
+import Detail from "../pages/detail/detail";
+
+export default [
     {
-        path: "/", component: require("../pages/index/index.js")
+        path: "/", component: Index
     },
     {
-        path: "/detail/:id", component: require("../pages/detail/detail.js")
+        path: "/detail/:id", component: Detail
     }
 ]
